@@ -1,0 +1,13 @@
+- when one object acquires all the properties(states) and behaviours of parent object
+- represents IS-A relationship(parent-child relationship)
+- reuse the methods & fields
+- for code re-usability
+- for method overriding
+
+Types:
+1. Single Inheritance
+2. Multilevel Inheritance
+3. Hierarchical Inheritance
+4. Multiple Inheritance
+5.Hybrid Inheritance
+	- Both Multiple and Hybrid Inheritance does not support in Java because of ambiguity error

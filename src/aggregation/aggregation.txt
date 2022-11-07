@@ -1,0 +1,9 @@
+                  Aggregation (strong bonding)
+- Aggregation has a relationship
+- if a class have an entity reference in it
+- represents HAS-A relationship
+- code re-usability
+
+
+
+Composition(lose bonding)
