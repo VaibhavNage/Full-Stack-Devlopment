@@ -1,2 +1,17 @@
-package string;public class SubStringDemo {
+package string;
+
+public class SubStringDemo {
+    public static void main(String[] args) {
+        String str="Codekul";
+
+        System.out.println(str.substring(0,4));
+        System.out.println(str.substring(3,6));
+        System.out.println(str.substring(2));
+
+        // C o d e k u l
+        // 0 1 2 3 4 5 6
+
+        String str1="A";
+        System.out.println(str1.substring(0));
+    }
 }

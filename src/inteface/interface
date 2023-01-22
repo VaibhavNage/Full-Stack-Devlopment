@@ -3,5 +3,20 @@
 - methods are public & abstract by default
 - variables are public,static & final
 - used to achieve abstraction & multiple inheritance
+- support the functionality of multiple inheritance
+- used to achieve loose coupling
 - represents IS-A relationship
 - interface cannot instantiated
+
+relationship between
+class ---> class  ---- extends
+interface ---> class ----- implements
+interface ----> interface ----- extends
+
+Difference between Abstract & Interface
+
+	Abstract class                      interface
+1. can have abstract/Non-abstract       1. only have abstract methods
+	method
+2. doesn't support Multiple             2. support Multiple Inheritance
+	inheritance

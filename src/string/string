@@ -1,0 +1,83 @@
+- String is a class
+- sequence of characters
+- array of characters
+- final class
+- implements Serializable,Comparable,CharSequence,Constable, ConstantDesc
+
+Ways to create a String
+1. char[] ch = {'W','E','L','C','O','M','E'}
+
+  --by using new keyword
+2. String s = new String(ch);
+
+  -- by using string literal
+3. String s1 = "WELCOME";
+
+String Pool Constant
+- @ the time when we create a string literal, the JVM first checks the SPC.
+	If the string is already exists in pool, a ref to the pooled instance is returned,
+	otherwise a new string instance is created in pool.
+	Only one object will be created
+
+Immutable String
+ - unmodifiable or unchangeable
+ - state & data can not be changed
+
+String Compare
+  1. By using equals() method
+     - compares the content of string
+  2. By using == operator
+     - compares references not content
+  3. By compareTo() method
+     - compares the values lexicographically & return an integer
+      a)   0 : s1==s2
+      b) > 0 : s1>s2
+      c) < 0 : s1<s2
+
+String Concatenation:
+   - combination of multiple strings
+   1. by using + operator
+   2. concat method
+
+Substring
+   - part of string
+
+String Buffer
+   - a final class
+   - implements Serializable, Comparable<StringBuffer>, CharSequence
+   - a thread safe so multiple threads can not access it simultaneously
+   - methods are synchronised
+   - mutable(modifiable) i.e. it can be changed
+   - capacity() returns the current capacity of the buffer
+   - default capacity of buffer is 16
+
+String Builder
+   - a final class
+   - implements java.io.Serializable, Comparable<StringBuilder>, CharSequence
+   -  mutable(modifiable) i.e. it can be changed
+   - methods are non-synchronised
+   - not a thread safe
+
+Steps fro Custom Immutable class
+   1. create a final class
+   2. make instance variables of the class as final
+   3. no setter methods
+
+  Notes:
+  1. before Java 7, JVM string pool in PermGen space, which has a fixed size.
+     so can not be expanded at runtime, & is not eligible for garbage collection
+     we can get an OutOfMemoryError
+  2  from Java 7, SCP is stored in Heap Area, which is garbage collected by JVM.
+     reduced risk of  an OutOfMemoryError because unreferenced strings will be
+     removed from the pool, thereby releasing memory
+
+     String                       StringBuffer                        StringBuilder
+     1.  final class                  final  class                        final class
+     2.  Immutable                    Mutable                             Mutable
+     3.  non-thread safe              thread safe                         non-thread safe
+     4.  non-synchronized             synchronized                        non-synchronized
+     5.  string is slow &            fast & consumes less
+     	consumes more memory        memory
+     6.  overrides equals()           doesn't override
+     7.  stored in SCP               stored Hear Area
+     8.	                            less efficient                        more efficient

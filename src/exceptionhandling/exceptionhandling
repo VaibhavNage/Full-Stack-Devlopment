@@ -1,0 +1,84 @@
+- to handle the runtime errors
+Types
+a) Built-In Exception
+1. Checked Exception
+	- compile time exception
+	- IOException, SQLException
+2. Unchecked Exception
+	- run time exception
+
+Error
+ - irrecoverable
+
+
+
+
+Throwable
+	- Exception
+		- IOException
+		- SqlException
+		- ClassNotFoundException
+		- FileNotFoundException
+		- RuntimeException
+			- ArithmeticException
+			- NullPointerException
+			- IndexOutOfBoundException
+			- NumberFormatException
+	- Error
+		- StackOverFlowError
+		- OutOfMemoryError
+		- VirtualMachineError
+
+Reasons for exceptions:
+1. Invalid user input
+2. network connection error
+3. Out of memory
+
+1. try
+	- place an exception code
+	- must be followed by either catch or finally
+2. catch
+	- handle the exception
+	- without try not allow
+3. finally
+	- to execute code like closing the connection
+	- always executed whether exception is handled or not
+	- eg. closing the file, closing database connection
+	- only one finally block
+4. throw
+	- to throw an exception explicitly
+	- can throw either checked or unchecked exception
+5. throws
+	- declare the exception
+	- suppress the exception
+
+
+	throw                           throws
+1. used to throw an                declare the exception
+   exception explicitly
+
+2. can only propagate             can used to propagate checked &
+   the unchecked exceptions       unchecked exception
+
+3. within a method                with method signature
+
+UserDefinedException:
+class class_name extends Exception{
+	class_name(String s){
+	super(s);
+	}
+}
+Nested Try :
+ - try inside another try
+ - Sometimes a situation may arise where part of a block may cause one error and the entire block
+ itself may cause another error. In such cases exception handlers have to be nested.
+
+ Exception Propagation:
+ - when an exception occurs within a method then if that method does not handle that exception object
+ will be propagated to caller then the call method is responsible that exception.
+ - an exception is thrown from the top of the stack & if it not cought , then it drops down the call stack
+
+
+
+1. create user defined exception voteAgeCriteria
+2. Difference between final, finally & finalize

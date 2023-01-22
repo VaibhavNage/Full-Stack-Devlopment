@@ -2,7 +2,7 @@ package arrays;
 
 import java.util.Scanner;
 
-public class MultiplicationOfThreeMatrices {
+public class MultiplicationOfTwoMatrices {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
@@ -23,9 +23,20 @@ public class MultiplicationOfThreeMatrices {
             }
         }
         System.out.println("Addition of two matrices\n");
-        for (int i = 0; i < b.length; i++) {
-            for (int j = 0; j < b.length; j++) {
-                c[i][j] = a[i][j] * b[i][j];
+        for (int i = 0; i < c.length; i++) {
+            for (int j = 0; j < c.length; j++) {
+                c[i][j] = a[i][j]+b[i][j];
+                System.out.print(c[i][j]+" ");
+            }
+            System.out.println();
+        }
+        System.out.println("Multiplication of two matrices\n");
+        for (int i = 0; i < c.length; i++) {
+            for (int j = 0; j < c.length; j++) {
+
+                for (int k=0;k<2;k++){
+                    c[i][j]+=a[i][k]*b[k][j];
+                }
                 System.out.print(c[i][j]+" ");
             }
             System.out.println();

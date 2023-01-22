@@ -1,0 +1,98 @@
+Database
+ - collection of data
+
+ Relational Database:
+  SQL - Structured Query Language
+  eg. MySQL,PostgreSQL,MS-SQL,Oracle
+
+ DataBase Management System
+ - how to access database,manipulate data, represent data
+
+ MySQL
+  - open source
+Database : collection of tables
+Tables : combination of rows & columns
+
+JDBC
+ - Java Database Connectivity
+ - to connect & execute query with database (classes/interfaces)
+ - abstraction
+ - allow the application to send requests made by clients to specified database
+
+- 2 packages
+	1. java.sql
+	2. javax.sql
+
+7 Steps to connect Java application with DB
+1. import packages
+2. Load & register the driver
+	- Class.forName("com.mysql.jdbc.Driver")
+	- method is used to dynamically load the driver class
+3. Connecting & establish the connection
+	- Connection con = DriverManager.getConnection("url","username","password");
+	- to establish connection with database
+4. create statement
+	1. Statement - select
+	2. PreparedStatement
+		- insert,update,delete,create
+		- used to execute parameterized query
+	3. CallableStatement - to call stored procedure & functions
+5. Execute the query
+	1. ResultSet executeQuery();
+	2. int executeUpdate();
+6. Process the result
+7. Close the connection
+
+JDBC Driver
+	- a s/w component that enables java application to interact with DB
+	Types :
+		1. JDBC-ODBC Bridge Driver
+		2. Native-API Driver
+		3. Network Protocol driver
+		4. Thin Driver(fully written in JAVA)
+
+1. Driver Manager
+2. Connection
+3. Statement
+4. ResultSet
+5.
+
+
+
+
+
+
+
+
+ *----------------------------------
+ mysql> show databases;
+ mysql> create database Java7Sept;
+mysql> use Java7Sept;
+mysql> create table student(rno int(2),name varchar(15),age int,class varchar(10),city varchar(20));
+mysql> desc student;
+mysql> insert into student values(1,'Abhijeet',16,'12th','Pune');
+Query OK, 1 row affected (0.01 sec)
+mysql> select * from student;
++------+----------+------+-------+------+
+| rno  | name     | age  | class | city |
++------+----------+------+-------+------+
+|    1 | Abhijeet |   16 | 12th  | Pune |
++------+----------+------+-------+------+
+1 row in set (0.00 sec)
+
+mysql> update student set class = 'MCA' where name = 'Vaibhav';
+Query OK, 1 row affected (0.00 sec)
+mysql> delete from student where rno = 4;
+Query OK, 1 row affected (0.00 sec)
+
+mysql> alter table student add email varchar(255);
+Query OK, 0 rows affected (0.03 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+
+//Stored Procedure
+- pre compiled SQL statements stored in database
+Types:
+1. procedure with no parameter
+2. procedure with IN parameter
+3. procedure with OUT parameter

@@ -1,0 +1,9 @@
+Marker Interface
+- empty interface
+- interface which has no member (no methods/no fields)
+- tagged interface
+- used to provide some essential info to JVM so that JVM may perform some useful operation
+eg. Serializable,Cloneable & Remote etc
+
+instanceof
+- used to check whether an object is an specified class/interface or not.

@@ -22,7 +22,7 @@ import java.sql.*;
  * +------+
  */
 
-public class MySqlOutParameterProcedure {
+public class MySqlProcedureOUTParameter {
     public static void main(String[] args) throws ClassNotFoundException, SQLException {
         String url = "jdbc:mysql://localhost:3306/java7sept";
         String username = "root";
