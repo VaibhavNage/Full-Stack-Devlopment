@@ -1,0 +1,103 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.body {
+    height: 100%;
+    background-color: #fff;
+    font-family: Helvetica, Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.blog {
+    margin: 10px 20px;
+    display: flex;
+    flex-direction: row;
+    padding-left: 440px;
+    padding-top: 150px;
+    
+}
+
+#one {
+    padding-top: 60px;
+    height: 106px;
+    width: 40%;
+}
+
+h1{
+    color: #1778F2;
+    font-size: 65px;
+}
+
+h3{
+    font-size: 30px;
+}
+
+#two{
+   
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    background-color: #fff;
+    padding-top: 20px;
+    width:430px;
+    height:335px;
+    box-shadow:-10px -10px 15px rgba(0,0,0,0.1),
+    10px 10px 15px rgba(0,0,0,0.1);
+    border-radius: 10px;
+}
+
+input[type='text'], input[type='password']{
+    width: 380px;
+    height:50px;
+    margin:10px 0px;
+    padding:0px 10px ;
+    outline:none;
+    border:1px solid #ccc;
+    font-size: 18px;
+    border-radius: 10px;
+}
+
+.btn1{
+    width: 405px;
+    height:50px;
+    margin:10px 0px;
+    padding:0px 10px ;
+    outline:none;
+    border:1px solid #ccc;
+    font-size: 18px;
+    border-radius: 10px;
+    color: whitesmoke;
+    background-color: #1778F2;
+}
+
+span{
+    color: #1778F2;
+    font-family: 'Segoe UI';
+}
+
+.btn2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: #42b72a;
+    width:250px;
+    height:50px;
+    font-size:18px;
+    font-weight: 30px;
+    color:white;
+    border-radius: 10px;
+    border:1px solid #ccc;
+}
+
+.blog2{
+    padding-left: 1080px;
+     margin:20px 0px;
+    font-size: 18px;
+    font-weight: 20px;
+}
