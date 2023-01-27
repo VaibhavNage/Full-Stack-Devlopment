@@ -11,7 +11,6 @@ class ThreadPriorityImpl{
     public static void main(String[] args) {
         ThreadPriorityDemo tp1=new ThreadPriorityDemo();
         ThreadPriorityDemo tp2=new ThreadPriorityDemo();
-        ThreadPriorityDemo tp3=new ThreadPriorityDemo();
         tp1.setPriority(Thread.MIN_PRIORITY);
         tp2.setPriority(Thread.MAX_PRIORITY);
         tp1.start();
