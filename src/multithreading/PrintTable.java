@@ -1,7 +1,7 @@
 package multithreading;
-
+//synchronised method
 public class PrintTable {
-    void PrintTable(int no){
+    synchronized void PrintTable(int no){
         for (int i=1;i<=10;i++){
             System.out.println(no*i);
             try {
