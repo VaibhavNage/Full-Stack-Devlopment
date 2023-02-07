@@ -97,6 +97,7 @@ Methods:
 
 8. int getPriority()
 9. void setPriority(int newPriority)
+	- between 0-10
 10. void setDaemon(boolean on)
 11. boolean isDaemon()
 
@@ -140,6 +141,7 @@ Daemon Thread
 	- provides services to user threads for background supporting task
 	- to serve user threads
 
+
 DeadLock
  - occur in a situation when a thread is waiting for an object lock,
   that is acquired by another thread & second thread is
@@ -157,8 +159,11 @@ Synchronisation
 	a) Mutual Exclusive
 		it will helps keep threads from interfering with one another
 			1. Synchronized method
+				- lock an object
+				eg. synchronised void printTable()
 			2. Synchronized block
 				- synchronizes portion of method
+				- more efficient than synchronised method
 			3. static synchronization
 				- lock will be on the class
 	b) Cooperation(Inter-Thread communication)
@@ -172,6 +177,7 @@ Thread Pool
 	- facilitates the execution of N number of tasks using the same thread
 	- when any thread completes its execution , it can pickup a new task from the queue and execute it
 	- when all tasks are completed the threads remain active and wait for more tasks in the thread pool
+	- reuses previously created thread to execute task
  ThreadPoolExecutor :
     - separates the task creation & its execution
  Advantages
@@ -196,12 +202,3 @@ Notes:
 4. Thread priorities cannot guarantee that a higher priority thread will always be executed first
 	than the lower priority thread.
    The selection of the threads for execution depends upon the thread scheduler
-
-Homework
-1. Difference between Thread & Process
-2. difference between yield() & join() & sleep()
-3. movie ticket
-	//no of seats - 150 seats
-	- bookTicket
-4. bank example by static synchronisation
-5. bus ticket reservation
