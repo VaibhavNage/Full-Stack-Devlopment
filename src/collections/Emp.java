@@ -12,11 +12,11 @@ public class Emp {
         this.name = name;
         this.mobile = mobile;
     }
-    public String toString(){
-        return "Emp {"+
-                "EmpID= "+ empId+'\''+
-                ",Name='"+name+'\''+
-                ",Mobile ="+mobile+
+    public String toString() {
+        return "Emp{" +
+                "empId=" + empId +
+                ", name='" + name + '\'' +
+                ", mobile=" + mobile +
                 '}';
     }
 }
