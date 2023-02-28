@@ -52,6 +52,7 @@ Generics
 	- cannot contains duplicate element
 	- added only one null value
 	- unordered collection, it does not follow the insertion order
+
 7. TreeSet(C)
 	- elements from tree-set are sorted
 8. LinkedHashSet(C)
@@ -69,6 +70,7 @@ Generics
 	- Null elements are prohibited
 
 13. Map(I)
+	- java.util
 	- stores key & value pair
 	- keys are unique, values can be duplicate
 	- accepts only one null key, accepts more than one null values
@@ -143,4 +145,6 @@ Comparator:
  Note:
  1. Generics does not work with primitive data types
  2. String class & wrapper classes are implements the Comparable interface.
+
+
 
