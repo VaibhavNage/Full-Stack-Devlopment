@@ -1,0 +1,59 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/light.css" id="theme">
+    <title>Calculator App</title>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="container">
+            <h1>Calculator</h1>
+
+            <div class="first-row">
+
+                <input type="text" name="result" class="result" id="result" value="" placeholder="Result" readonly />
+
+                <input type="button" value="C" id="clear" onclick="clearScreen()">
+            </div>
+
+            <div class="second-row">
+                <input type="button" value="1" onclick="displayScreen(1)" />
+                <input type="button" value="2" onclick="displayScreen(2)" />
+                <input type="button" value="3" onclick="displayScreen(3)" />
+                <input type="button" value="+" onclick="displayScreen('+')" />
+            </div>
+
+            <div class="third-row">
+                <input type="button" value="4" onclick="displayScreen(4)" />
+                <input type="button" value="5" onclick="displayScreen(5)" />
+                <input type="button" value="6" onclick="displayScreen(6)" />
+                <input type="button" value="-" onclick="displayScreen('-')" />
+            </div>
+
+            <div class="fourth-row">
+                <input type="button" value="7" onclick="displayScreen(7)" />
+                <input type="button" value="8" onclick="displayScreen(8)" />
+                <input type="button" value="9" onclick="displayScreen(9)" />
+                <input type="button" value="*" onclick="displayScreen('*')" />
+            </div>
+
+            <div class="fifth-row">
+                <input type="button" value="/" onclick="displayScreen('/')" />
+                <input type="button" value="0" onclick="displayScreen(0)" />
+                <input type="button" value="." onclick="displayScreen('.')" />
+                <input type="button" value="=" onclick="result.value=eval(result.value)" />
+            </div>
+
+            <div class="theme">
+                <button id="dark-mode" onclick="changeTheme()">
+                    Dark Mode 🌙
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
